@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Tamilselvan!</title>
+<style>
+  /* Define CSS for cake cutting animation */
+  @keyframes cut {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(30deg); }
+    100% { transform: rotate(0); }
+  }
+  .cake {
+    width: 200px;
+    height: 200px;
+    background-color: #ffdb58;
+    border-radius: 50%;
+    position: relative;
+  }
+  .cake::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 40px solid #b5651d;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>
+</head>
+<body>
+
+<h1>Happy Birthday Tamilselvan!</h1>
+<h2>May you get all the blessings from Suraj Kumar.</h2>
+
+<div class="cake" id="cake"></div>
+
+<audio id="birthdayAudio" src="https://www.soundjay.com/button/beep-07.wav" preload="auto" autoplay loop></audio>
+<audio id="cowAudio" src="https://www.soundjay.com/animals/cow-mooing-01a.mp3" preload="auto" volume="0.2"></audio>
+
+<script>
+function burstPartyPoppers() {
+    var poppers = document.createElement('div');
+    poppers.innerHTML = "<img src='https://media.giphy.com/media/kyKXz5Vtvfb8zEYXrm/giphy.gif' alt='Party Poppers'>";
+    document.body.appendChild(poppers);
+    
+    var cake = document.getElementById('cake');
+    cake.style.animation = 'cut 2s infinite';
+    
+    var cowSound = document.getElementById('cowAudio');
+    cowSound.play();
+}
+  
+window.onload = burstPartyPoppers;
+</script>
+
+</body>
+</html>
